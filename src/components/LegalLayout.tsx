@@ -17,7 +17,7 @@ export default function LegalLayout({ title, children }: Props) {
             href="/"
             className="inline-flex items-center gap-2 text-sm text-gold-400 transition-colors hover:text-sand"
           >
-            ← Retour à l'accueil
+            ← Back to home
           </a>
           <h1 className="mt-6 font-display text-3xl text-sand sm:text-4xl">{title}</h1>
           <div className="prose-legal mt-10 space-y-6 text-sm leading-relaxed text-mute">

@@ -6,7 +6,7 @@ import content from "../content/site.json";
 const LINKEDIN = "https://www.linkedin.com/in/delphine-planes-302aa730";
 
 export default function Contact() {
-  const { contact } = content;
+  const { contact, legal } = content;
 
   return (
     <section id="contact" className="relative z-10 px-6 py-28 sm:py-36">
@@ -44,7 +44,7 @@ export default function Contact() {
                 <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </a>
               <a
-                href="mailto:?subject=Sourcing%20conversation"
+                href={`mailto:${legal.contactEmail}?subject=Sourcing%20conversation`}
                 className="group inline-flex items-center gap-2 rounded-full border border-line px-7 py-3.5 font-medium text-sand transition-all duration-300 hover:border-gold-600/60 hover:bg-white/[0.03] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500/60"
               >
                 <Mail className="h-4 w-4 text-gold-400" />

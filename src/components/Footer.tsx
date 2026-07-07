@@ -36,11 +36,11 @@ export default function Footer() {
 
       <div className="mx-auto mt-6 flex max-w-content flex-wrap items-center justify-center gap-x-4 gap-y-2 text-[11px] text-mute/70">
         <a href="/mentions-legales.html" className="hover:text-gold-400">
-          Mentions légales
+          Legal notice
         </a>
         <span aria-hidden>·</span>
         <a href="/confidentialite.html" className="hover:text-gold-400">
-          Politique de confidentialité
+          Privacy policy
         </a>
       </div>
 

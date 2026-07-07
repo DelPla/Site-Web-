@@ -4,45 +4,45 @@ import LegalLayout from "./components/LegalLayout";
 import content from "./content/site.json";
 import "./index.css";
 
-function MentionsLegales() {
+function LegalNotice() {
   const { legal } = content;
 
   return (
-    <LegalLayout title="Mentions légales">
+    <LegalLayout title="Legal Notice">
       <section>
-        <h2 className="font-display text-lg text-sand">Éditeur du site</h2>
+        <h2 className="font-display text-lg text-sand">Site publisher</h2>
         <p>
-          Nom / Raison sociale : {legal.companyName}
+          Company name: {legal.companyName}
           <br />
-          Statut juridique : {legal.legalStatus}
+          Legal status: {legal.legalStatus}
           <br />
-          SIRET : {legal.siret}
+          Company registration number (SIRET): {legal.siret}
           <br />
-          Adresse du siège : {legal.address}
+          Registered address: {legal.address}
           <br />
-          Numéro de TVA intracommunautaire (si applicable) : {legal.vat}
+          Intra-community VAT number (if applicable): {legal.vat}
         </p>
       </section>
 
       <section>
         <h2 className="font-display text-lg text-sand">
-          Responsable de la publication
+          Publication director
         </h2>
         <p>
           Delphine Planes
           <br />
-          Contact : {legal.contactEmail}
+          Contact: {legal.contactEmail}
         </p>
       </section>
 
       <section>
-        <h2 className="font-display text-lg text-sand">Hébergement</h2>
+        <h2 className="font-display text-lg text-sand">Hosting</h2>
         <p>
-          Ce site est hébergé par :
+          This site is hosted by:
           <br />
           Netlify, Inc.
           <br />
-          512 2nd Street, Suite 200, San Francisco, CA 94107, États-Unis
+          512 2nd Street, Suite 200, San Francisco, CA 94107, United States
           <br />
           <a
             href="https://www.netlify.com"
@@ -56,12 +56,11 @@ function MentionsLegales() {
       </section>
 
       <section>
-        <h2 className="font-display text-lg text-sand">Propriété intellectuelle</h2>
+        <h2 className="font-display text-lg text-sand">Intellectual property</h2>
         <p>
-          L'ensemble des contenus présents sur ce site (textes, structure,
-          identité visuelle) est la propriété de Delphine Planes, sauf mention
-          contraire. Toute reproduction sans autorisation préalable est
-          interdite.
+          All content on this site (text, structure, visual identity) is the
+          property of Delphine Planes unless otherwise stated. Any reproduction
+          without prior authorization is prohibited.
         </p>
       </section>
     </LegalLayout>
@@ -70,6 +69,6 @@ function MentionsLegales() {
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <MentionsLegales />
+    <LegalNotice />
   </React.StrictMode>
 );
