@@ -1,0 +1,149 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Enables local testing without GitHub login — run `npx decap-server` alongside
+# `npm run dev`, then open http://localhost:5173/admin. Remove this line (and
+# set up git-gateway auth via Netlify/GitHub) before using the CMS in production.
+local_backend: true
+
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "site"
+    label: "Contenu du site"
+    files:
+      - file: "src/content/site.json"
+        label: "Textes du site"
+        name: "site"
+        fields:
+          - label: "Hero (section d'accueil)"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Bandeau du haut", name: "eyebrow", widget: "string" }
+              - { label: "Titre — début", name: "headlinePre", widget: "string" }
+              - { label: "Titre — mot en surbrillance", name: "headlineHighlight", widget: "string" }
+              - { label: "Titre — fin", name: "headlinePost", widget: "string" }
+              - { label: "Sous-texte — début", name: "subPitchPre", widget: "text" }
+              - { label: "Sous-texte — mot en surbrillance", name: "subPitchHighlight", widget: "string" }
+              - { label: "Sous-texte — fin", name: "subPitchPost", widget: "string" }
+              - { label: "Bouton principal", name: "ctaPrimary", widget: "string" }
+              - { label: "Bouton secondaire", name: "ctaSecondary", widget: "string" }
+              - label: "Langues affichées"
+                name: "languages"
+                widget: "list"
+                field: { label: "Langue", name: "lang", widget: "string" }
+
+          - label: "The Thesis (section 2)"
+            name: "thesis"
+            widget: "object"
+            fields:
+              - { label: "Bandeau", name: "eyebrow", widget: "string" }
+              - { label: "Titre — début", name: "title", widget: "string" }
+              - { label: "Titre — surbrillance", name: "titleHighlight", widget: "string" }
+              - { label: "Texte d'intro", name: "intro", widget: "text" }
+              - label: "Colonnes (Quantitative / Qualitative)"
+                name: "columns"
+                widget: "list"
+                fields:
+                  - label: "Icône"
+                    name: "icon"
+                    widget: "select"
+                    options: ["cpu", "heart-handshake"]
+                  - { label: "Étiquette", name: "tag", widget: "string" }
+                  - { label: "Titre", name: "title", widget: "string" }
+                  - { label: "Texte", name: "body", widget: "text" }
+                  - { label: "Couleur d'accent (ne pas modifier)", name: "accent", widget: "hidden" }
+
+          - label: "Citation (pull-quote)"
+            name: "quote"
+            widget: "object"
+            fields:
+              - { label: "Texte de la citation", name: "text", widget: "text" }
+
+          - label: "Expertise (6 services)"
+            name: "expertise"
+            widget: "object"
+            fields:
+              - { label: "Bandeau", name: "eyebrow", widget: "string" }
+              - { label: "Titre — début", name: "title", widget: "string" }
+              - { label: "Titre — surbrillance", name: "titleHighlight", widget: "string" }
+              - label: "Services"
+                name: "services"
+                widget: "list"
+                fields:
+                  - label: "Icône"
+                    name: "icon"
+                    widget: "select"
+                    options: ["globe2", "factory", "handshake", "line-chart", "shield-check", "boxes"]
+                  - { label: "Titre", name: "title", widget: "string" }
+                  - { label: "Texte", name: "body", widget: "text" }
+
+          - label: "Global Fluency (langues)"
+            name: "fluency"
+            widget: "object"
+            fields:
+              - { label: "Bandeau", name: "eyebrow", widget: "string" }
+              - { label: "Titre — début", name: "title", widget: "string" }
+              - { label: "Titre — surbrillance", name: "titleHighlight", widget: "string" }
+              - { label: "Paragraphe 1", name: "intro1", widget: "text" }
+              - { label: "Paragraphe 2", name: "intro2", widget: "text" }
+              - label: "Cartes de langues"
+                name: "langs"
+                widget: "list"
+                fields:
+                  - { label: "Nom natif (ex. 中文)", name: "native", widget: "string" }
+                  - { label: "Nom", name: "name", widget: "string" }
+                  - { label: "Description", name: "note", widget: "text" }
+
+          - label: "Track Record (stats + parcours)"
+            name: "track"
+            widget: "object"
+            fields:
+              - label: "Statistiques"
+                name: "stats"
+                widget: "list"
+                fields:
+                  - { label: "Chiffre", name: "to", widget: "number" }
+                  - { label: "Suffixe (ex. + ou %)", name: "suffix", widget: "string", required: false }
+                  - { label: "Légende", name: "label", widget: "string" }
+              - { label: "Bandeau", name: "eyebrow", widget: "string" }
+              - { label: "Titre", name: "title", widget: "string" }
+              - label: "Étapes du parcours"
+                name: "milestones"
+                widget: "list"
+                fields:
+                  - { label: "Période (ex. Today, Career, Foundation)", name: "period", widget: "string" }
+                  - { label: "Titre", name: "title", widget: "string" }
+                  - { label: "Texte", name: "body", widget: "text" }
+
+          - label: "Contact"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Bandeau", name: "eyebrow", widget: "string" }
+              - { label: "Titre — début", name: "titlePre", widget: "string" }
+              - { label: "Titre — mot surligné", name: "titleAnd", widget: "string" }
+              - { label: "Titre — fin", name: "titlePost", widget: "string" }
+              - { label: "Texte d'intro", name: "intro", widget: "text" }
+              - { label: "Bouton LinkedIn", name: "ctaLinkedin", widget: "string" }
+              - { label: "Bouton email", name: "ctaEmail", widget: "string" }
+
+          - label: "Footer"
+            name: "footer"
+            widget: "object"
+            fields:
+              - { label: "Phrase d'accroche", name: "tagline", widget: "string" }
+
+          - label: "Mentions légales (infos entreprise)"
+            name: "legal"
+            widget: "object"
+            fields:
+              - { label: "Nom / Raison sociale", name: "companyName", widget: "string" }
+              - { label: "Statut juridique", name: "legalStatus", widget: "string" }
+              - { label: "Numéro SIRET", name: "siret", widget: "string" }
+              - { label: "Adresse du siège", name: "address", widget: "string" }
+              - { label: "N° TVA intracommunautaire (laisser vide si non applicable)", name: "vat", widget: "string", required: false }
+              - { label: "Email de contact", name: "contactEmail", widget: "string" }

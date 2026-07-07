@@ -1,0 +1,279 @@
+===============================================================
+  VOTRE SITE — DELPHINE PLANES
+  Guide très simple pour publier votre site et modifier vos textes
+===============================================================
+
+Ce guide vous accompagne du début à la fin. Suivez les étapes DANS
+L'ORDRE. Chaque étape se fait avec des clics dans un site internet —
+vous n'aurez JAMAIS besoin de toucher au code.
+
+Comptez environ 30 minutes au total, en une seule fois.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ÉTAPE 0 — DÉZIPPER LE DOSSIER (30 secondes)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Vous avez reçu ce site sous forme d'un fichier compressé (un ".zip").
+Avant tout, il faut l'ouvrir :
+
+1. Enregistrez le fichier ZIP reçu par email sur votre Bureau
+2. Faites un CLIC DROIT dessus → "Extraire tout..." → "Extraire"
+3. Un dossier normal apparaît (par exemple "DP site") — c'est lui
+   que vous utiliserez dans toutes les étapes suivantes
+
+Ne travaillez jamais directement "dans" le ZIP : il faut d'abord
+l'extraire, sinon les commandes des étapes suivantes ne marcheront pas.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ÉTAPE 1 — INSTALLER 2 PROGRAMMES (10 minutes)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Git → https://git-scm.com/download/win
+   Téléchargez, ouvrez le fichier, cliquez "Suivant" partout sans
+   rien changer, jusqu'à "Terminer".
+
+2. Node.js → https://nodejs.org
+   Cliquez sur le bouton avec écrit "LTS", téléchargez, installez
+   de la même façon (cliquer "Suivant" partout).
+
+Vous n'aurez besoin de rien installer d'autre.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ÉTAPE 2 — CRÉER VOTRE COMPTE GITHUB (5 minutes)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+GitHub, c'est l'endroit où votre site sera stocké en ligne, comme
+un grand classeur. C'est gratuit.
+
+1. Allez sur https://github.com
+2. Cliquez "Sign up" (S'inscrire)
+3. Utilisez votre propre email et créez votre propre mot de passe
+   — RETENEZ-LES BIEN, vous en aurez besoin plus tard
+4. Une fois inscrite, cliquez sur le "+" en haut à droite, puis
+   "New repository" (Nouveau dépôt)
+5. Donnez-lui un nom, par exemple : delphine-planes-site
+6. Laissez tout le reste par défaut, cliquez "Create repository"
+
+Une page s'ouvre avec des instructions techniques — ne vous en
+occupez pas, gardez juste cet onglet ouvert.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ÉTAPE 3 — ENVOYER LE SITE SUR VOTRE GITHUB (5 minutes)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Dans le menu Windows, tapez "PowerShell" et ouvrez-le
+2. Copiez-collez cette ligne, puis appuyez sur Entrée
+   (remplacez le chemin si vous avez mis le dossier ailleurs, ou
+   si vous l'avez renommé) :
+
+   cd "Desktop\DP site"
+
+3. Copiez-collez ces lignes UNE PAR UNE, en appuyant sur Entrée
+   après chacune :
+
+   git init
+   git add .
+   git commit -m "Premier envoi de mon site"
+   git branch -M main
+   git remote add origin COLLEZ_ICI_L_ADRESSE_DE_VOTRE_REPO
+   git push -u origin main
+
+   Pour "COLLEZ_ICI_L_ADRESSE_DE_VOTRE_REPO" : retournez sur la
+   page GitHub de l'étape 2, copiez l'adresse qui ressemble à
+   https://github.com/votre-nom/delphine-planes-site.git
+
+4. Une fenêtre peut s'ouvrir pour vous demander de vous connecter
+   à GitHub — connectez-vous avec le compte créé à l'étape 2.
+
+✅ Votre site est maintenant sauvegardé en ligne.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ÉTAPE 4 — PUBLIER LE SITE EN LIGNE AVEC NETLIFY (5 minutes)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Netlify va prendre votre code sur GitHub et en faire un vrai site
+visible sur internet. C'est gratuit et automatique.
+
+1. Allez sur https://www.netlify.com
+2. Cliquez "Sign up", puis "GitHub" pour vous connecter avec le
+   compte créé à l'étape 2 (le plus simple)
+3. Cliquez "Add new site" → "Import an existing project"
+4. Choisissez "GitHub", puis sélectionnez votre dépôt
+   "delphine-planes-site"
+5. Netlify devine tout seul les réglages — cliquez "Deploy site"
+
+En 1 minute, votre site est en ligne avec une adresse du type :
+  joyful-panda-123abc.netlify.app
+
+(vous pourrez lui donner un nom plus joli, ou un vrai nom de
+domaine comme delphineplanes.com, plus tard — voir la fin du guide)
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ÉTAPE 5 — ACTIVER VOTRE ACCÈS POUR MODIFIER LES TEXTES (5 minutes)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+C'est l'étape qui vous permettra de changer vos textes vous-même,
+sans jamais toucher au code. Deux boutons à activer.
+
+1. Sur Netlify, dans votre site, allez dans l'onglet "Identity"
+   (dans le menu du haut)
+2. Cliquez sur le bouton "Enable Identity"
+3. Un peu plus bas sur cette même page, trouvez la section
+   "Services" → "Git Gateway"
+4. Cliquez sur "Enable Git Gateway"
+
+C'est tout — ces deux boutons suffisent, rien d'autre à configurer.
+
+5. Toujours dans l'onglet "Identity", cliquez sur "Invite users"
+6. Tapez VOTRE PROPRE email, cliquez "Send"
+7. Allez consulter vos emails — vous recevrez un message de
+   Netlify avec un bouton "Accept the invite"
+8. Cliquez dessus, puis choisissez VOTRE mot de passe personnel
+   pour le site (différent de celui de GitHub si vous voulez)
+
+✅ Vous êtes maintenant autorisée à modifier le contenu du site.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ÉTAPE 6 — MODIFIER VOS TEXTES (à chaque fois que vous voulez)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Allez sur l'adresse de votre site suivie de "/admin"
+   Exemple : joyful-panda-123abc.netlify.app/admin
+2. Connectez-vous avec l'email et le mot de passe de l'étape 5
+3. Cliquez sur "Textes du site"
+4. Vous voyez toutes les sections du site (Hero, Expertise,
+   Contact...) — dépliez celle que vous voulez modifier
+5. Changez le texte dans la case
+6. En haut, cliquez sur "Publish" (Publier)
+
+Votre site se met à jour tout seul, automatiquement, en moins
+d'une minute. Vous pouvez recommencer autant de fois que vous
+voulez, à tout moment.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+⚠️  ÉTAPE 7 — REMPLIR VOS INFORMATIONS LÉGALES (OBLIGATOIRE)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  ╔═══════════════════════════════════════════════════════════╗
+  ║  IMPORTANT : tant que cette étape n'est pas faite, votre   ║
+  ║  site affiche la mention "[À COMPLÉTER]" sur la page des   ║
+  ║  mentions légales. Un site professionnel en France DOIT    ║
+  ║  afficher ces informations — ne sautez pas cette étape.   ║
+  ╚═══════════════════════════════════════════════════════════╝
+
+En France, tout site professionnel est légalement obligé d'afficher
+ses "mentions légales" (qui édite le site, son numéro d'entreprise,
+etc.). Votre site a déjà une page prête pour ça — il ne reste qu'à
+la remplir avec VOS informations. Cela se fait en 2 minutes, une
+seule fois, dans la même interface que vos textes.
+
+1. Allez sur votre site suivi de "/admin" (comme à l'étape 6)
+2. Cliquez sur "Textes du site"
+3. Descendez tout en bas jusqu'au bloc
+   "Mentions légales (infos entreprise)" et dépliez-le
+4. Remplissez chaque case avec vos informations réelles :
+
+   • Nom / Raison sociale
+       → votre nom commercial ou votre nom+prénom si vous
+         exercez en votre nom propre
+
+   • Statut juridique
+       → exemple : "Entreprise individuelle", "Auto-entrepreneur",
+         "EURL", "SASU"... (ce qui correspond à votre situation)
+
+   • Numéro SIRET
+       → le numéro à 14 chiffres de votre entreprise
+         (sur vos documents officiels, ou sur annuaire-entreprises.
+         data.gouv.fr en cherchant votre nom)
+
+   • Adresse du siège
+       → l'adresse déclarée de votre activité
+
+   • N° TVA intracommunautaire
+       → seulement si vous en avez un (sinon, laissez vide)
+
+   • Email de contact
+       → l'adresse email professionnelle où l'on peut vous joindre
+       → BON À SAVOIR : cet email apparaît automatiquement sur VOS
+         DEUX pages légales (mentions légales ET politique de
+         confidentialité). Vous ne le remplissez qu'une seule fois
+         ici, pas besoin de le retaper ailleurs.
+
+5. En haut, cliquez sur "Publish" (Publier)
+
+✅ Votre site est maintenant complet et en règle.
+
+COMMENT VÉRIFIER QUE C'EST BON :
+Vos deux pages légales sont accessibles en ajoutant leur nom à la fin
+de l'adresse de votre site (une fois qu'il est en ligne sur Netlify) :
+
+   • votre-site.netlify.app/mentions-legales.html
+   • votre-site.netlify.app/confidentialite.html
+
+Ouvrez ces deux adresses dans votre navigateur : les mentions
+"[À COMPLÉTER]" doivent avoir disparu au profit de vos vraies infos.
+Ces deux pages sont aussi accessibles via les liens tout en bas du
+site (dans le pied de page).
+
+Astuce : si vous ne connaissez pas votre numéro SIRET, vous le
+trouverez gratuitement sur https://annuaire-entreprises.data.gouv.fr
+en tapant votre nom ou celui de votre entreprise.
+
+
+NOTE IMPORTANTE — ces pages ne s'ouvrent PAS en double-cliquant :
+Les fichiers "mentions-legales.html" et "confidentialite.html"
+présents dans le dossier ne peuvent PAS être ouverts en
+double-cliquant dessus (vous verriez une page vide ou du charabia).
+C'est normal : ce sont des pages qui ne fonctionnent qu'une fois le
+site en ligne. Consultez-les toujours via l'adresse de votre site en
+ligne, comme indiqué juste au-dessus.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+RÉSUMÉ — CE QUI SE PASSE À CHAQUE FOIS QUE VOUS "PUBLIEZ"
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  Vous tapez votre texte dans l'interface (/admin)
+                    ↓
+  Vous cliquez "Publish"
+                    ↓
+  Le changement part automatiquement vers GitHub
+                    ↓
+  Netlify republie le site tout seul
+                    ↓
+  Votre site est à jour (moins d'une minute)
+
+Vous n'avez JAMAIS besoin d'ouvrir de code, de PowerShell, ni
+de refaire les étapes 3 et 4 — elles ne servent qu'une seule fois,
+au tout début.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+(OPTIONNEL) UN VRAI NOM DE DOMAINE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Pour remplacer l'adresse Netlify par un vrai nom comme
+"delphineplanes.com" :
+
+1. Achetez le nom sur https://www.namecheap.com ou
+   https://www.ovh.com (environ 10-15€/an)
+2. Sur Netlify, allez dans "Domain settings" → "Add a domain"
+3. Suivez les instructions affichées à l'écran
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+BESOIN D'AIDE ?
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Si une étape bloque, prenez une capture d'écran du message
+affiché et envoyez-la à la personne qui vous a remis ce dossier.
+
+===============================================================

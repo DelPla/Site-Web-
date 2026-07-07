@@ -1,0 +1,173 @@
+{
+  "contact": {
+    "eyebrow": "Let's talk",
+    "titlePre": "Bring data",
+    "titleAnd": "and",
+    "titlePost": "a handshake to your next sourcing decision",
+    "intro": "Whether you are entering Asian markets, rebuilding a supplier panel, or renegotiating at scale — let's start the conversation.",
+    "ctaLinkedin": "Connect on LinkedIn",
+    "ctaEmail": "Send an email"
+  },
+  "track": {
+    "stats": [
+      {
+        "to": 20,
+        "suffix": "+",
+        "label": "Years in international purchasing"
+      },
+      {
+        "to": 4,
+        "suffix": "",
+        "label": "Languages spoken fluently"
+      },
+      {
+        "to": 3,
+        "suffix": "",
+        "label": "Global sourcing markets"
+      },
+      {
+        "to": 100,
+        "suffix": "%",
+        "label": "Relationship-led negotiation"
+      }
+    ],
+    "eyebrow": "Track Record",
+    "title": "A path written across two worlds.",
+    "milestones": [
+      {
+        "period": "Today",
+        "title": "Group Purchasing Director",
+        "body": "Across several larger corporations: Harmonize, Standardize, Globalize. International career across the Automotive, Home Appliances, Housing and Boating industries."
+      },
+      {
+        "period": "Career",
+        "title": "Build Best Supplier Panels & Resilient Supply chains",
+        "body": "Manage cross-cultural negotiations. Promote processes to cut cost, enhance quality, mitigate risk, shorten lead times — sustainably."
+      },
+      {
+        "period": "Foundation",
+        "title": "British & Chinese universities",
+        "body": "French Mediterranean upbringing. British & Chinese education — the origin of a genuinely bilingual, bicultural sourcing practice."
+      }
+    ]
+  },
+  "thesis": {
+    "eyebrow": "The Thesis",
+    "title": "The edge is no longer the data.",
+    "titleHighlight": "It is fluency.",
+    "intro": "Everyone now has the algorithms. What separates outcomes is the ability to move fluently between systems, cultures and people — turning analysis into agreements that last.",
+    "columns": [
+      {
+        "icon": "cpu",
+        "tag": "Quantitative",
+        "title": "AI-enhanced data crunching",
+        "body": "Spend analytics, supplier scorecards, cost breakdowns & total-cost of ownership modelling, risk mapping. Data sharpens the questions and exposes the leverage.",
+        "accent": "from-slate-400/20"
+      },
+      {
+        "icon": "heart-handshake",
+        "tag": "Qualitative",
+        "title": "Human relationships prevail",
+        "body": "Trust built across cultures and time zones, on the spot negotiation skills, commitments that hold when the spreadsheet can't see around the corner.",
+        "accent": "from-gold-500/25"
+      }
+    ]
+  },
+  "fluency": {
+    "eyebrow": "Global Fluency",
+    "title": "Four languages.",
+    "titleHighlight": "One un-interrupted conversation.",
+    "intro1": "Fluency is not a line on a CV — it is the ability to hear what a supplier actually means, to close in their language, and to keep a relationship alive long after the contract signature.",
+    "intro2": "Educated across British and Chinese universities, working seamlessly between West and East.",
+    "langs": [
+      {
+        "native": "中文",
+        "name": "Mandarin",
+        "note": "Negotiating directly with suppliers across China and Mandarin speaking countries."
+      },
+      {
+        "native": "English",
+        "name": "English",
+        "note": "The lingua franca of global trade — studied at British university level."
+      },
+      {
+        "native": "Italiano",
+        "name": "Italian",
+        "note": "Native fluency — home market networks."
+      },
+      {
+        "native": "Français",
+        "name": "French",
+        "note": "Native fluency — home market and francophone networks."
+      }
+    ]
+  },
+  "expertise": {
+    "eyebrow": "Expertise",
+    "title": "Two decades of international purchasing,",
+    "titleHighlight": "distilled into services.",
+    "services": [
+      {
+        "icon": "globe2",
+        "title": "China Sourcing expertise",
+        "body": "Supplier panels sourcing — from discovery to long-term partnership."
+      },
+      {
+        "icon": "factory",
+        "title": "Worldwide OEM & outsourcing",
+        "body": "Outsourcing from Original Equipment Manufacturers, aligning specification, cost and capacity, across the globe."
+      },
+      {
+        "icon": "handshake",
+        "title": "Cross-cultural negotiation",
+        "body": "Negotiation conducted natively in Mandarin, English, Italian and French."
+      },
+      {
+        "icon": "line-chart",
+        "title": "Strategic procurement",
+        "body": "Category strategy, spend analysis and total-cost-of-ownership modelling."
+      },
+      {
+        "icon": "shield-check",
+        "title": "Supplier risk & quality",
+        "body": "Qualification, audits and resilience planning across volatile supply chains."
+      },
+      {
+        "icon": "boxes",
+        "title": "Supply-chain transformation",
+        "body": "Re-architecting panels to cut cost, lift quality and shorten lead times."
+      }
+    ]
+  },
+  "legal": {
+    "companyName": "[À COMPLÉTER]",
+    "legalStatus": "[À COMPLÉTER — ex. entreprise individuelle, EURL, SASU...]",
+    "siret": "[À COMPLÉTER]",
+    "address": "[À COMPLÉTER]",
+    "vat": "[À COMPLÉTER — laisser vide si non applicable]",
+    "contactEmail": "[À COMPLÉTER — adresse email professionnelle]"
+  },
+  "hero": {
+    "headlineHighlight": "new alpha",
+    "subPitchPost": "prevail.",
+    "subPitchPre": "AI-enhanced data crunching delivers valuable quantitative analysis — but ultimately, qualitative",
+    "ctaSecondary": "View profile",
+    "eyebrow": "Global Sourcing & Supplier Management",
+    "headlinePre": "Global fluency is the",
+    "ctaPrimary": "Start a conversation",
+    "headlinePost": "in supplier management.",
+    "subPitchHighlight": "human relationships",
+    "languages": [
+      "中文 Mandarin",
+      "English",
+      "Italiano",
+      "Français"
+    ]
+  },
+  "footer": {
+    "tagline": "Global fluency is the new alpha in supplier management."
+  },
+  "quote": {
+    "text": "Algorithms can rank a thousand suppliers in a second. Only a person can earn the one relationship that holds when everything else moves."
+  }
+}
