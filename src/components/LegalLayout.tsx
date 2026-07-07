@@ -10,10 +10,16 @@ export default function LegalLayout({ title, children }: Props) {
   return (
     <div className="grain relative min-h-dvh">
       <Background />
-      <Nav />
+      <Nav linkPrefix="/" />
       <main className="relative z-10 px-6 pb-28 pt-40">
         <div className="mx-auto max-w-3xl">
-          <h1 className="font-display text-3xl text-sand sm:text-4xl">{title}</h1>
+          <a
+            href="/"
+            className="inline-flex items-center gap-2 text-sm text-gold-400 transition-colors hover:text-sand"
+          >
+            ← Retour à l'accueil
+          </a>
+          <h1 className="mt-6 font-display text-3xl text-sand sm:text-4xl">{title}</h1>
           <div className="prose-legal mt-10 space-y-6 text-sm leading-relaxed text-mute">
             {children}
           </div>

@@ -9,7 +9,14 @@ const LINKS = [
   { label: "Contact", href: "#contact" },
 ];
 
-export default function Nav() {
+/**
+ * `linkPrefix` lets the same nav work on standalone pages (legal pages):
+ * pass "/" so links point back to the home page's sections instead of
+ * to anchors that don't exist on the current page.
+ */
+type Props = { linkPrefix?: string };
+
+export default function Nav({ linkPrefix = "" }: Props) {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -34,7 +41,7 @@ export default function Nav() {
         }`}
         style={{ maxWidth: scrolled ? "1100px" : "1200px" }}
       >
-        <a href="#top" className="group flex items-center gap-3">
+        <a href={linkPrefix ? "/" : "#top"} className="group flex items-center gap-3">
           <span className="grid h-9 w-9 place-items-center rounded-full border border-gold-600/40 font-display text-gold-400">
             DP
           </span>
@@ -47,7 +54,7 @@ export default function Nav() {
           {LINKS.map((l) => (
             <a
               key={l.href}
-              href={l.href}
+              href={linkPrefix + l.href}
               className="relative text-sm text-mute transition-colors duration-200 hover:text-sand focus-visible:text-sand focus-visible:outline-none after:absolute after:-bottom-1.5 after:left-0 after:h-px after:w-0 after:bg-gold-500 after:transition-all after:duration-300 hover:after:w-full"
             >
               {l.label}
@@ -56,7 +63,7 @@ export default function Nav() {
         </nav>
 
         <a
-          href="#contact"
+          href={linkPrefix + "#contact"}
           className="rounded-full border border-gold-600/50 bg-gold-500/10 px-4 py-2 text-sm font-medium text-gold-400 transition-all duration-300 hover:bg-gold-500/20 hover:text-sand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500/60"
         >
           Get in touch
