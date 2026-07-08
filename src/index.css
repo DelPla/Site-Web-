@@ -15,8 +15,9 @@
 
 @layer base {
   :root {
-    --ink-950: #0c0a09;
-    --gold: #ca8a04;
+    --ink-950: #f5efe4;
+    --navy: #1b2c46;
+    --gold: #ad8636;
   }
 
   * {
@@ -43,13 +44,13 @@
 
   body {
     @apply bg-ink-950 text-sand font-sans antialiased;
-    background-color: #0c0a09;
+    background-color: #f5efe4;
     overflow-x: hidden;
   }
 
   ::selection {
-    background: rgba(202, 138, 4, 0.3);
-    color: #fafaf9;
+    background: rgba(173, 134, 54, 0.25);
+    color: #1b2c46;
   }
 
   /* Custom scrollbar */
@@ -57,33 +58,34 @@
     width: 10px;
   }
   ::-webkit-scrollbar-track {
-    background: #0c0a09;
+    background: #eee6d6;
   }
   ::-webkit-scrollbar-thumb {
-    background: #44403c;
+    background: #cabfa6;
     border-radius: 999px;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: #ca8a04;
+    background: #ad8636;
   }
 }
 
 @layer components {
-  /* Liquid-glass surface */
+  /* Liquid-glass surface — frosted paper on cream */
   .glass {
     background: linear-gradient(
       135deg,
-      rgba(41, 37, 36, 0.55),
-      rgba(28, 25, 23, 0.35)
+      rgba(255, 255, 255, 0.75),
+      rgba(255, 255, 255, 0.45)
     );
-    backdrop-filter: blur(16px) saturate(140%);
-    -webkit-backdrop-filter: blur(16px) saturate(140%);
-    border: 1px solid rgba(214, 211, 209, 0.1);
+    backdrop-filter: blur(16px) saturate(120%);
+    -webkit-backdrop-filter: blur(16px) saturate(120%);
+    border: 1px solid rgba(27, 44, 70, 0.1);
+    box-shadow: 0 10px 40px -24px rgba(27, 44, 70, 0.35);
   }
 
   /* Gold gradient text */
   .text-gold-gradient {
-    background: linear-gradient(120deg, #e0a82e 0%, #ca8a04 45%, #fde68a 100%);
+    background: linear-gradient(120deg, #c8a24e 0%, #ad8636 50%, #8a6a26 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -113,11 +115,38 @@
     inset: 0;
     z-index: 1;
     pointer-events: none;
-    opacity: 0.04;
+    opacity: 0.025;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   }
 
   .perspective {
     perspective: 1200px;
+  }
+
+  /* Orbital rotation for the Expertise diagram.
+     Uses !important on the individual animation properties so the section's
+     rotation survives the global reduced-motion reset above (it's a core,
+     intentional brand element). Play-state is left free so hover can pause it. */
+  @keyframes orbit-spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes orbit-spin-rev {
+    to {
+      transform: rotate(-360deg);
+    }
+  }
+  .orbit-rotate {
+    animation-name: orbit-spin !important;
+    animation-duration: 34s !important;
+    animation-timing-function: linear !important;
+    animation-iteration-count: infinite !important;
+  }
+  .orbit-rotate-rev {
+    animation-name: orbit-spin-rev !important;
+    animation-duration: 34s !important;
+    animation-timing-function: linear !important;
+    animation-iteration-count: infinite !important;
   }
 }

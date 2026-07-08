@@ -37,7 +37,7 @@ export default function Contact() {
                 href={LINKEDIN}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-gold-400 to-gold-600 px-7 py-3.5 font-medium text-ink-950 transition-all duration-300 hover:shadow-[0_0_40px_-8px_rgba(202,138,4,0.7)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-400 focus-visible:ring-offset-2 focus-visible:ring-offset-ink-950"
+                className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-gold-400 to-gold-600 px-7 py-3.5 font-medium text-white transition-all duration-300 hover:shadow-[0_0_40px_-8px_rgba(173,134,54,0.6)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-400 focus-visible:ring-offset-2 focus-visible:ring-offset-ink-950"
               >
                 <Linkedin className="h-4 w-4" />
                 {contact.ctaLinkedin}

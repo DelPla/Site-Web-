@@ -70,6 +70,7 @@ collections:
               - { label: "Bandeau", name: "eyebrow", widget: "string" }
               - { label: "Titre — début", name: "title", widget: "string" }
               - { label: "Titre — surbrillance", name: "titleHighlight", widget: "string" }
+              - { label: "Texte du cercle central", name: "centerLabel", widget: "string" }
               - label: "Services"
                 name: "services"
                 widget: "list"

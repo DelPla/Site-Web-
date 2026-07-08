@@ -51,11 +51,11 @@ export default function HexGrid() {
       ctx.closePath();
 
       if (brightness > 0.01) {
-        ctx.fillStyle = `rgba(202,138,4,${brightness * 0.18})`;
+        ctx.fillStyle = `rgba(173,134,54,${brightness * 0.14})`;
         ctx.fill();
       }
 
-      ctx.strokeStyle = `rgba(202,138,4,${0.05 + brightness * 0.4})`;
+      ctx.strokeStyle = `rgba(173,134,54,${0.05 + brightness * 0.5})`;
       ctx.lineWidth = 1;
       ctx.stroke();
     }
