@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "motion/react";
+import { Menu, X } from "lucide-react";
+import content from "../content/site.json";
 
 const LINKS = [
   { label: "Thesis", href: "#thesis" },
@@ -18,6 +20,8 @@ type Props = { linkPrefix?: string };
 
 export default function Nav({ linkPrefix = "" }: Props) {
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const { navigation } = content;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -36,16 +40,24 @@ export default function Nav({ linkPrefix = "" }: Props) {
       }`}
     >
       <div
-        className={`mx-auto flex max-w-content items-center justify-between rounded-full px-5 py-2.5 transition-all duration-300 ${
+        className={`relative mx-auto flex max-w-content items-center justify-between rounded-full px-5 py-2.5 transition-all duration-300 ${
           scrolled ? "glass mx-4 md:mx-auto" : "bg-transparent"
         }`}
         style={{ maxWidth: scrolled ? "1100px" : "1200px" }}
       >
         <a href={linkPrefix ? "/" : "#top"} className="group flex items-center gap-3">
-          <span className="grid h-9 w-9 place-items-center rounded-full border border-gold-600/40 font-display text-gold-400">
-            DP
-          </span>
-          <span className="hidden font-display text-lg tracking-wide text-sand sm:block">
+          {navigation.headerPhoto ? (
+            <img
+              src={navigation.headerPhoto}
+              alt="Delphine Planes"
+              className="h-9 w-9 rounded-full border border-gold-600/40 object-cover"
+            />
+          ) : (
+            <span className="grid h-9 w-9 place-items-center rounded-full border border-gold-600/40 font-display text-gold-400">
+              DP
+            </span>
+          )}
+          <span className="font-display text-base tracking-wide text-sand sm:text-lg">
             Delphine&nbsp;Planes
           </span>
         </a>
@@ -62,12 +74,45 @@ export default function Nav({ linkPrefix = "" }: Props) {
           ))}
         </nav>
 
-        <a
-          href={linkPrefix + "#contact"}
-          className="rounded-full border border-gold-600/50 bg-gold-500/10 px-4 py-2 text-sm font-medium text-gold-400 transition-all duration-300 hover:bg-gold-500/20 hover:text-sand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500/60"
-        >
-          Get in touch
-        </a>
+        <div className="flex items-center gap-2">
+          <a
+            href={linkPrefix + "#contact"}
+            className="hidden rounded-full border border-gold-600/50 bg-gold-500/10 px-4 py-2 text-sm font-medium text-gold-400 transition-all duration-300 hover:bg-gold-500/20 hover:text-sand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500/60 sm:block"
+          >
+            Get in touch
+          </a>
+          <button
+            type="button"
+            aria-label={menuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={menuOpen}
+            onClick={() => setMenuOpen((open) => !open)}
+            className="grid h-10 w-10 place-items-center rounded-full border border-gold-600/50 bg-gold-500/10 text-gold-500 transition-colors hover:bg-gold-500/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500/60 md:hidden"
+          >
+            {menuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          </button>
+        </div>
+
+        {menuOpen && (
+          <nav className="glass absolute inset-x-0 top-[calc(100%+0.75rem)] mx-1 rounded-3xl p-3 md:hidden">
+            {LINKS.map((l) => (
+              <a
+                key={l.href}
+                href={linkPrefix + l.href}
+                onClick={() => setMenuOpen(false)}
+                className="block rounded-2xl px-4 py-3 text-sm text-sand transition-colors hover:bg-gold-500/10"
+              >
+                {l.label}
+              </a>
+            ))}
+            <a
+              href={linkPrefix + "#contact"}
+              onClick={() => setMenuOpen(false)}
+              className="mt-1 block rounded-2xl bg-gradient-to-r from-gold-400 to-gold-600 px-4 py-3 text-center text-sm font-medium text-white"
+            >
+              Get in touch
+            </a>
+          </nav>
+        )}
       </div>
     </motion.header>
   );

@@ -54,11 +54,10 @@ export default function Expertise() {
 
         {/* Orbital diagram — desktop / tablet.
             Hovering pauses the rotation so a node is easy to click. */}
-        <div className="group relative mx-auto mt-16 hidden aspect-square w-full max-w-[600px] md:block">
+        <div className="group relative mx-auto mt-12 aspect-square w-full max-w-[600px] md:mt-16">
           {/* Main ring the nodes travel along */}
           <div
-            className="absolute rounded-full border border-gold-500/25"
-            style={{ inset: "8%" }}
+            className="absolute inset-[12%] rounded-full border border-gold-500/25 md:inset-[8%]"
           />
 
           {/* Rotating layer: spokes + nodes (rotates continuously) */}
@@ -90,18 +89,18 @@ export default function Expertise() {
                   style={{ left: `${n.x}%`, top: `${n.y}%` }}
                 >
                   {/* counter-rotate so icon + name stay upright while orbiting */}
-                  <span className="orbit-rotate-rev flex w-[124px] flex-col items-center">
+                  <span className="orbit-rotate-rev flex w-[86px] flex-col items-center md:w-[124px]">
                     <span
-                      className={`grid h-14 w-14 place-items-center rounded-full border bg-white transition-all duration-300 ${
+                      className={`grid h-11 w-11 place-items-center rounded-full border bg-white transition-all duration-300 md:h-14 md:w-14 ${
                         isActive
                           ? "scale-110 border-gold-500 text-gold-600 shadow-[0_0_0_5px_rgba(173,134,54,0.16),0_16px_36px_-16px_rgba(27,44,70,0.6)]"
                           : "border-gold-500/40 text-gold-500 shadow-[0_14px_34px_-18px_rgba(27,44,70,0.55)] group-hover:hover:border-gold-500/70"
                       }`}
                     >
-                      <Icon className="h-6 w-6" strokeWidth={1.5} />
+                      <Icon className="h-5 w-5 md:h-6 md:w-6" strokeWidth={1.5} />
                     </span>
                     <span
-                      className={`mt-2 font-display text-sm font-medium leading-tight transition-colors ${
+                      className={`mt-1.5 font-display text-[11px] font-medium leading-tight transition-colors md:mt-2 md:text-sm ${
                         isActive ? "text-gold-600" : "text-navy"
                       }`}
                     >
@@ -122,7 +121,7 @@ export default function Expertise() {
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-                className="flex w-[260px] flex-col items-center justify-center rounded-[1.75rem] px-6 py-7 text-center"
+                className="flex w-[166px] flex-col items-center justify-center rounded-[1.5rem] px-3 py-4 text-center md:w-[260px] md:rounded-[1.75rem] md:px-6 md:py-7"
                 style={{
                   background: "rgba(255,255,255,0.82)",
                   border: "1px solid rgba(173,134,54,0.35)",
@@ -130,26 +129,26 @@ export default function Expertise() {
                   backdropFilter: "blur(6px)",
                 }}
               >
-                <span className="grid h-10 w-10 place-items-center rounded-full border border-gold-500/40 text-gold-500">
-                  <ActiveIcon className="h-5 w-5" strokeWidth={1.5} />
+                <span className="grid h-8 w-8 place-items-center rounded-full border border-gold-500/40 text-gold-500 md:h-10 md:w-10">
+                  <ActiveIcon className="h-4 w-4 md:h-5 md:w-5" strokeWidth={1.5} />
                 </span>
-                <h3 className="mt-3 font-display text-lg leading-tight text-navy">
+                <h3 className="mt-2 font-display text-sm leading-tight text-navy md:mt-3 md:text-lg">
                   {active.title}
                 </h3>
-                <p className="mt-2 text-xs leading-relaxed text-mute">
+                <p className="mt-1.5 text-[10px] leading-relaxed text-mute md:mt-2 md:text-xs">
                   {active.body}
                 </p>
               </motion.div>
             ) : (
               <div
-                className="flex aspect-square w-[136px] flex-col items-center justify-center rounded-full text-center"
+                className="flex aspect-square w-[102px] flex-col items-center justify-center rounded-full text-center md:w-[136px]"
                 style={{
                   background: "rgba(255,255,255,0.55)",
                   border: "1px solid rgba(173,134,54,0.3)",
                   boxShadow: "0 16px 44px -28px rgba(27,44,70,0.45)",
                 }}
               >
-                <span className="px-3 font-display text-sm leading-tight text-navy/80">
+                <span className="px-2 font-display text-xs leading-tight text-navy/80 md:px-3 md:text-sm">
                   {expertise.centerLabel}
                 </span>
               </div>
@@ -157,8 +156,8 @@ export default function Expertise() {
           </div>
         </div>
 
-        <p className="mt-6 hidden text-center text-xs text-mute md:block">
-          Click an expertise to read more.
+        <p className="mt-6 text-center text-xs text-mute">
+          Tap an expertise to read more.
         </p>
 
         {/* Fallback list — mobile */}
@@ -167,7 +166,7 @@ export default function Expertise() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.15 }}
-          className="mt-14 grid gap-px overflow-hidden rounded-3xl border border-line bg-line md:hidden"
+          className="hidden"
         >
           <div className="bg-white/60 p-6 text-center">
             <p className="font-display text-xl text-navy">

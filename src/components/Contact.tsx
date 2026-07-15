@@ -23,6 +23,13 @@ export default function Contact() {
 
           <div className="relative">
             <Reveal>
+              {contact.photo && (
+                <img
+                  src={contact.photo}
+                  alt="Delphine Planes"
+                  className="mx-auto mb-7 h-28 w-28 rounded-full border-2 border-gold-500/40 object-cover shadow-[0_16px_36px_-18px_rgba(27,44,70,0.55)] sm:h-36 sm:w-36"
+                />
+              )}
               <p className="eyebrow">{contact.eyebrow}</p>
               <h2 className="mx-auto mt-5 max-w-3xl font-display text-3xl leading-tight text-sand sm:text-5xl">
                 {contact.titlePre}{" "}

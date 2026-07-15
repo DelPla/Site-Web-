@@ -2,11 +2,6 @@ backend:
   name: git-gateway
   branch: main
 
-# Enables local testing without GitHub login — run `npx decap-server` alongside
-# `npm run dev`, then open http://localhost:5173/admin. Remove this line (and
-# set up git-gateway auth via Netlify/GitHub) before using the CMS in production.
-local_backend: true
-
 media_folder: "public/images/uploads"
 public_folder: "/images/uploads"
 
@@ -124,6 +119,7 @@ collections:
             name: "contact"
             widget: "object"
             fields:
+              - { label: "Photo de contact (portrait)", name: "photo", widget: "image", required: false, hint: "Photo ronde affichée en haut de la section Contact." }
               - { label: "Bandeau", name: "eyebrow", widget: "string" }
               - { label: "Titre — début", name: "titlePre", widget: "string" }
               - { label: "Titre — mot surligné", name: "titleAnd", widget: "string" }
@@ -131,6 +127,12 @@ collections:
               - { label: "Texte d'intro", name: "intro", widget: "text" }
               - { label: "Bouton LinkedIn", name: "ctaLinkedin", widget: "string" }
               - { label: "Bouton email", name: "ctaEmail", widget: "string" }
+
+          - label: "Barre du haut"
+            name: "navigation"
+            widget: "object"
+            fields:
+              - { label: "Photo dans le rond du logo", name: "headerPhoto", widget: "image", required: false, hint: "Remplace le rond DP dans la barre du haut. Utilisez de préférence le même portrait carré." }
 
           - label: "Footer"
             name: "footer"

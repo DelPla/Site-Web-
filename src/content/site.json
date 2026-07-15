@@ -1,4 +1,7 @@
 {
+  "navigation": {
+    "headerPhoto": ""
+  },
   "contact": {
     "eyebrow": "Let's talk",
     "titlePre": "Bring data",
@@ -6,7 +9,8 @@
     "titlePost": "a handshake to your next sourcing decision",
     "intro": "Whether you are entering Asian markets, rebuilding a supplier panel, or renegotiating at scale — let's start the conversation.",
     "ctaLinkedin": "Connect on LinkedIn",
-    "ctaEmail": "Send an email"
+    "ctaEmail": "Send an email",
+    "photo": ""
   },
   "track": {
     "stats": [
