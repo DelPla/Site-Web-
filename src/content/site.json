@@ -1,7 +1,4 @@
 {
-  "navigation": {
-    "headerPhoto": ""
-  },
   "contact": {
     "eyebrow": "Let's talk",
     "titlePre": "Bring data",
@@ -144,13 +141,16 @@
       }
     ]
   },
+  "navigation": {
+    "headerPhoto": ""
+  },
   "legal": {
     "companyName": "[À COMPLÉTER]",
     "legalStatus": "[À COMPLÉTER — ex. entreprise individuelle, EURL, SASU...]",
     "siret": "[À COMPLÉTER]",
     "address": "[À COMPLÉTER]",
     "vat": "[À COMPLÉTER — laisser vide si non applicable]",
-    "contactEmail": "[À COMPLÉTER — adresse email professionnelle]"
+    "contactEmail": "Globalfluencysourcing@gmail.com"
   },
   "hero": {
     "headlineHighlight": "new alpha",
