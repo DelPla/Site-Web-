@@ -1,0 +1,15 @@
+# Configuration de build du site.
+# Ce fichier fait autorité sur les réglages saisis dans l'interface Netlify :
+# si le site doit un jour être recréé, il se redéploie sans rien reconfigurer.
+
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  # Vite 7 exige Node >= 20.19. On fige la version pour que le build
+  # local et le build Netlify soient identiques.
+  NODE_VERSION = "22"
+
+# Les en-têtes de sécurité restent définis dans public/_headers,
+# volontairement : un seul endroit, pas de règle en double.
