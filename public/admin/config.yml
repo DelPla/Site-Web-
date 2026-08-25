@@ -119,7 +119,7 @@ collections:
             name: "contact"
             widget: "object"
             fields:
-              - { label: "Photo de contact (portrait)", name: "photo", widget: "image", required: false, hint: "Photo ronde affichée en haut de la section Contact." }
+              - { label: "Photo de contact (portrait)", name: "photo", widget: "image", required: false, hint: "Photo ronde affichée en haut de la section Contact. IMPORTANT : la photo doit peser moins de 1 Mo, sinon l'enregistrement échoue. Une photo prise au téléphone est trop lourde : réduisez-la avant de l'envoyer." }
               - { label: "Bandeau", name: "eyebrow", widget: "string" }
               - { label: "Titre — début", name: "titlePre", widget: "string" }
               - { label: "Titre — mot surligné", name: "titleAnd", widget: "string" }
@@ -132,7 +132,7 @@ collections:
             name: "navigation"
             widget: "object"
             fields:
-              - { label: "Photo dans le rond du logo", name: "headerPhoto", widget: "image", required: false, hint: "Remplace le rond DP dans la barre du haut. Utilisez de préférence le même portrait carré." }
+              - { label: "Photo dans le rond du logo", name: "headerPhoto", widget: "image", required: false, hint: "Remplace le rond DP dans la barre du haut. Utilisez de préférence le même portrait carré. IMPORTANT : moins de 1 Mo, sinon l'enregistrement échoue." }
 
           - label: "Footer"
             name: "footer"
