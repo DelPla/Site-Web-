@@ -33,7 +33,9 @@ export default function Quote() {
           })}
         </p>
         <div className="mx-auto mt-8 h-px w-16 bg-gold-500/60" />
-        <p className="mt-5 eyebrow !text-mute">Delphine Planes</p>
+        <p translate="no" className="notranslate mt-5 eyebrow !text-mute">
+          Delphine Planes
+        </p>
       </div>
     </section>
   );

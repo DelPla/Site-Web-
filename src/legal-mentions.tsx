@@ -29,7 +29,9 @@ function LegalNotice() {
           Publication director
         </h2>
         <p>
-          Delphine Planes
+          <span translate="no" className="notranslate">
+            Delphine Planes
+          </span>
           <br />
           Contact: {legal.contactEmail}
         </p>
@@ -59,7 +61,11 @@ function LegalNotice() {
         <h2 className="font-display text-lg text-sand">Intellectual property</h2>
         <p>
           All content on this site (text, structure, visual identity) is the
-          property of Delphine Planes unless otherwise stated. Any reproduction
+          property of{" "}
+          <span translate="no" className="notranslate">
+            Delphine Planes
+          </span>{" "}
+          unless otherwise stated. Any reproduction
           without prior authorization is prohibited.
         </p>
       </section>

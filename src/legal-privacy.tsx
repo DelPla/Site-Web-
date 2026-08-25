@@ -42,7 +42,9 @@ function PrivacyPolicy() {
       <section>
         <h2 className="font-display text-lg text-sand">Data controller</h2>
         <p>
-          Delphine Planes
+          <span translate="no" className="notranslate">
+            Delphine Planes
+          </span>
           <br />
           Contact: {legal.contactEmail}
         </p>

@@ -12,7 +12,9 @@ export default function Footer() {
             DP
           </span>
           <div>
-            <p className="font-display text-sand">Delphine Planes</p>
+            <p translate="no" className="notranslate font-display text-sand">
+              Delphine Planes
+            </p>
             <p className="text-xs text-mute">
               Global Sourcing &amp; Supplier Management
             </p>
@@ -45,7 +47,11 @@ export default function Footer() {
       </div>
 
       <p className="mx-auto mt-4 max-w-content text-center text-[11px] text-mute/60">
-        © {new Date().getFullYear()} Delphine Planes. All rights reserved.
+        © {new Date().getFullYear()}{" "}
+        <span translate="no" className="notranslate">
+          Delphine Planes
+        </span>
+        . All rights reserved.
       </p>
     </footer>
   );

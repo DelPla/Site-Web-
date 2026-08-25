@@ -49,6 +49,7 @@ export default function Nav({ linkPrefix = "" }: Props) {
           {navigation.headerPhoto ? (
             <img
               src={navigation.headerPhoto}
+              translate="no"
               alt="Delphine Planes"
               className="h-9 w-9 rounded-full border border-gold-600/40 object-cover"
             />
@@ -57,7 +58,10 @@ export default function Nav({ linkPrefix = "" }: Props) {
               DP
             </span>
           )}
-          <span className="font-display text-base tracking-wide text-sand sm:text-lg">
+          <span
+            translate="no"
+            className="notranslate font-display text-base tracking-wide text-sand sm:text-lg"
+          >
             Delphine&nbsp;Planes
           </span>
         </a>
