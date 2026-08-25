@@ -29,8 +29,27 @@ export default function CountUp({ to, suffix = "", duration = 1.6 }: Props) {
     return () => cancelAnimationFrame(raf);
   }, [inView, to, duration, reduce]);
 
+  // Filet de sécurité : useInView peut ne jamais se déclencher (traduction
+  // automatique qui remplace les nœuds, onglet resté en arrière-plan pendant
+  // le scroll). Plutôt que d'afficher un 0 trompeur, on pose la valeur finale
+  // dès qu'on constate que l'élément est bel et bien à l'écran.
+  useEffect(() => {
+    if (inView) return;
+    const id = window.setInterval(() => {
+      const el = ref.current;
+      if (!el) return;
+      const rect = el.getBoundingClientRect();
+      const visible = rect.top < window.innerHeight && rect.bottom > 0;
+      if (visible) {
+        setValue((v) => (v === 0 ? to : v));
+        window.clearInterval(id);
+      }
+    }, 1200);
+    return () => window.clearInterval(id);
+  }, [inView, to]);
+
   return (
-    <span ref={ref} className="tabular-nums">
+    <span ref={ref} translate="no" className="notranslate tabular-nums">
       {value}
       {suffix}
     </span>
